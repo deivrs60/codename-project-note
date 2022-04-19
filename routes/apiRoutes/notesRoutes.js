@@ -1,9 +1,9 @@
 const router = require('express').Router();
 const fs = require('fs');
 const path = require('path');
-const { Script } = require("vm");
+const { Script } = require('vm');
 
-const {createNote, readFile} = require("../db/script.js")
+const {createNote, readFile} = require("../../db/script")
 
 router.get('/notes', (req, res) => {
     const {notes} = readFile()

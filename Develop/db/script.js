@@ -1,8 +1,8 @@
 const path = require('path');
-const fs = require('fs')
-
-// unique ID generator!
-const { v4: uuidv4 } = require("uuid")
+const fs = require('fs');
+const utils = require('util')
+// unique ID generator package!
+const { v4: uuidv4 } = require("uuid");
 
 
 function createNote(body, notes) {
@@ -16,7 +16,11 @@ function createNote(body, notes) {
     );
     return notes;
 }
+readFile = () => JSON.parse(fs.readFileSync(path.join(__dirname, './db.json')));
 
 
 
-module.exports = { createNote }
+
+
+
+module.exports = { createNote, readFile }
