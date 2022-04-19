@@ -3,7 +3,7 @@ const fs = require('fs');
 const path = require('path');
 const { Script } = require("vm");
 
-const {createNewNote, readFile} = require("../../db/script")
+const {createNote, readFile} = require("../db/script.js")
 
 router.get('/notes', (req, res) => {
     const {notes} = readFile()
@@ -14,7 +14,7 @@ router.get('/notes', (req, res) => {
 
 router.post('/notes', (req, res) => {
     const {notes} = readFile() 
-    const newNote = createNewNote(req.body, notes);
+    const newNote = createNote(req.body, notes);
     res.json(newNote);
 });
 
