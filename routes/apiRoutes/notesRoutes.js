@@ -1,9 +1,9 @@
 const router = require('express').Router();
 const fs = require('fs');
 const path = require('path');
-const { Script } = require('vm');
+const { Script } = require("vm");
 
-const {createNote, readFile} = require("../../db/script")
+const { createNote, readFile, deleteNote } = require('../../db/script');
 
 router.get('/notes', (req, res) => {
     const {notes} = readFile()
@@ -18,6 +18,12 @@ router.post('/notes', (req, res) => {
     res.json(newNote);
 });
 
+
+router.delete('/notes/:id', (req, res) => {
+    const{ notes } = readFile()
+    const deleteSelectedNote = deleteNote(req.params.id, notes);
+    res.json(deleteSelectedNote);
+})
 
 
 module.exports = router;
