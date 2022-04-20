@@ -14,16 +14,16 @@ router.get('/notes', (req, res) => {
 
 router.post('/notes', (req, res) => {
     const {notes} = readFile() 
-    const newNote = createNote(req.body, notes);
-    res.json(newNote);
+    const newlyCreatedNote = createNote(req.body, notes);
+    res.json(newlyCreatedNote);
 });
 
 
-router.delete('/notes/:id', (req, res) => {
-    const{ notes } = readFile()
-    const deleteSelectedNote = deleteNote(req.params.id, notes);
-    res.json(deleteSelectedNote);
-})
+// router.delete('/notes/:id', (req, res) => {
+//     const{ notes } = readFile()
+//     const deleteSelectedNote = deleteNote(req.params.id, notes);
+//     res.json(deleteSelectedNote);
+// })
 
 
 module.exports = router;
