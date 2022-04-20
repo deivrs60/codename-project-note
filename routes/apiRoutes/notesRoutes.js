@@ -3,7 +3,7 @@ const fs = require('fs');
 const path = require('path');
 const { Script } = require("vm");
 
-const { createNote, readFile, deleteNote } = require('../../db/script');
+const { createNote, deleteNote, readFile } = require('../../db/script');
 
 router.get('/notes', (req, res) => {
     const {notes} = readFile()
