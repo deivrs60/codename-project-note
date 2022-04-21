@@ -8,7 +8,7 @@ const { createNote, readFile } = require('../../db/script');
 router.get('/notes', (req, res) => {
     const {notes} = readFile()
     let results = notes
-    res.json(results)
+    res.json(results);
 });
 
 

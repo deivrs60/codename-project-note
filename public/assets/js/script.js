@@ -114,6 +114,7 @@ const handleRenderSaveBtn = () => {
   } else {
     show(saveNoteBtn);
   }
+  console.log("banana");
 };
 
 // Render the list of note titles
