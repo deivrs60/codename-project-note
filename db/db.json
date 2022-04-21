@@ -5,19 +5,14 @@
       "text": "test text"
     },
     {
-      "note-title": "test-title",
-      "note-text": "test-text",
-      "id": "e8f0a673-096b-4c80-a86d-146ba8800ea0"
-    },
-    {
-      "note-title": "test-title 2",
-      "note-text": "test-text 2",
-      "id": "be45d5cf-f792-4e2a-8379-33dacba45685"
-    },
-    {
       "title": "Add",
       "text": "Text here",
       "id": "757e7569-e4e7-4686-9c9a-66d037a6ea21"
+    },
+    {
+      "title": "WOOO!",
+      "text": "It works!",
+      "id": "e2f2cbbd-f60b-4878-a91d-6d5e77b38701"
     }
   ]
 }
